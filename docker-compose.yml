@@ -1,0 +1,28 @@
+services:
+  server:
+    build:
+      context: .
+      # args:
+      # specify which cuda version your card supports: https://developer.nvidia.com/cuda-gpus
+      # TORCH_CUDA_ARCH_LIST: ${TORCH_CUDA_ARCH_LIST:-7.5}
+    container_name: functionary-server
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+              count: 1
+              driver: nvidia
+    ipc: host
+    logging:
+      driver: json-file
+      options:
+        max-file: "1"
+        max-size: "10m"
+    ports:
+      - 8000:8000
+    shm_size: 256M
+    stdin_open: true
+    tty: true
+    ulimits:
+      stack: 67108864

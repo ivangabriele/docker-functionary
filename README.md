@@ -1,21 +1,35 @@
-# Base GitHub Repository Template
+# Functionary Docker 
 
-A general-purpose GitHub repository template that's ready for community-driven open-source projects.
+[![img-docker]][link-docker]
+[![img-github-actions]][link-github-actions]
 
-## Features
+Ready-to-deploy Docker image for [Functionary LLM][link-functionary] served as an OpenAI-Compatible API.
 
-- **License**
-  - [GNU Affero General Public License](https://www.gnu.org/licenses/why-affero-gpl.html): 
-    - Ensures code can be used in commercial projects but any changes must be open-sourced.
-- **Community Standards**
-  - Includes all the [recommended Community Standards files](https://opensource.guide) for open-source projects.
-- **GitHub Actions Workflow**
-  - A self-deleting workflow amending the default "Initial commit" message
-    with a [Conventional Commit](https://www.conventionalcommits.org) one: `feat: initialize project`.
-- **EditorConfig**
-  - An [EditorConfig](https://editorconfig.org) file following most common coding standards.
-- **CommitLint**
-  - A customized [CommitLint](https://commitlint.js.org) configuration file for enforcing commit message formats.
-- **Renovate**
-  - A customized [Renovate](https://github.com/renovatebot/renovate) configuration file
-    for automated dependency management.
+## Base
+
+- [nvidia/pytorch](https://catalog.ngc.nvidia.com/orgs/nvidia/containers/pytorch)
+
+## What's in this container?
+
+- Python 3.9
+- [Functionary LLM](https://github.com/MeetKai/functionary)
+- [vLLM Server](https://github.com/vllm-project/vllm)
+
+<!-- ## Deployment
+
+### RunPod
+
+Just click the button below to deploy this container to RunPod:
+
+[![Deploy on RunPod](https://img.shields.io/badge/RunPod-Deploy-673ab7?style=for-the-badge)](https://runpod.io/gsc?template=qk29nkmbfr&ref=s0k66ov1) -->
+
+---
+
+[img-docker]: https://img.shields.io/docker/pulls/ivangabriele/functionary?style=for-the-badge
+[img-runpod]: https://img.shields.io/badge/RunPod-Deploy-673ab7?style=for-the-badge
+[img-github-actions]: https://img.shields.io/github/actions/workflow/status/ivangabriele/docker-functionary/main.yml?branch=main&label=Release&style=for-the-badge
+
+[link-docker]: https://hub.docker.com/r/ivangabriele/functionary
+[link-functionary]: https://github.com/MeetKai/functionary
+[link-github-actions]: https://github.com/ivangabriele/docker-functionary/actions/workflows/main.yml
+[link-runpod]: https://runpod.io/gsc?template=qk29nkmbfr&ref=s0k66ov1
