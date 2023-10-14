@@ -1,7 +1,7 @@
 # Functionary Docker Image
 
 [![img-docker]][link-docker]
-[![img-github-actions]][link-github-actions]
+<!-- [![img-github-actions]][link-github-actions] -->
 
 Ready-to-deploy Docker image for [Functionary LLM][link-functionary] served as an OpenAI-Compatible API.
 

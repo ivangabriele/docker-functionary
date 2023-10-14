@@ -1,11 +1,12 @@
 name: Main
 
 on:
-  push:
-    branches:
-      - main
-  schedule:
-    - cron: "0 0 * * *"
+  # push:
+  #   branches:
+  #     - main
+  # schedule:
+  #   - cron: "0 0 * * *"
+  workflow_dispatch:
 
 env:
   DOCKER_HUB_REPOSITORY: ivangabriele/functionary
