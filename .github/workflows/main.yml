@@ -1,9 +1,9 @@
 name: Main
 
 on:
-  # push:
-  #   branches:
-  #     - main
+  push:
+    # branches:
+    #   - main
   # schedule:
   #   - cron: "0 0 * * *"
   workflow_dispatch:
@@ -17,16 +17,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       # https://github.com/easimon/maximize-build-space#inputs
-      - name: Maximize build space
-        uses: easimon/maximize-build-space@master
-        with:
-          remove-android: "true"
-          remove-codeql: "true"
-          remove-docker-images: "true"
-          remove-dotnet: "true"
-          remove-haskell: "true"
-          root-reserve-mb: 512
-          swap-size-mb: 1024
+      # - name: Maximize build space
+      #   uses: easimon/maximize-build-space@master
+      #   with:
+      #     remove-android: "true"
+      #     remove-codeql: "true"
+      #     remove-docker-images: "true"
+      #     remove-dotnet: "true"
+      #     remove-haskell: "true"
+      #     root-reserve-mb: 512
+      #     swap-size-mb: 1024
       - name: Checkout
         uses: actions/checkout@v4
       - name: Build
