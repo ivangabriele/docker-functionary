@@ -1,6 +1,6 @@
 # Recommended by vLLM documentation:
 # https://vllm.readthedocs.io/en/latest/getting_started/installation.html
-FROM nvcr.io/nvidia/pytorch:22.12-py3 as base
+FROM nvcr.io/nvidia/pytorch:23.12-py3 as base
 # FROM nvcr.io/nvidia/pytorch:23.09-py3 as base
 # FROM nvidia/cuda:12.2.0-devel-ubuntu22.04 as base
 
