@@ -39,7 +39,7 @@ jobs:
       - name: Push to Docker Hub
         run: docker push ${{ env.DOCKER_HUB_REPOSITORY }}:latest
       - name: Update Docker Hub Readme
-        uses: peter-evans/dockerhub-description@v3
+        uses: peter-evans/dockerhub-description@v4
         with:
           username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_PAT }}
